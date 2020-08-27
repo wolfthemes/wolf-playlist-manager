@@ -1,0 +1,414 @@
+# Copyright (C) 2020 WolfThemes
+# This file is distributed under the same license as the Playlist Manager package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Playlist Manager 1.2.8\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/wolf-playlist-manager\n"
+"POT-Creation-Date: 2020-08-27 13:21:26+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/basic-theme/exclude/file.php:3
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/plugin-include/plugin-include.php:6
+msgid "Exclude"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/plugin-include/include/file.php:2
+msgid "Include"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/add-domain.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:3
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:4
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:3
+msgid "String"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:9
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:10
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:11
+msgid "1 Star"
+msgid_plural "%s Stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:7
+#. translators: A single line translators comment.
+msgid "A"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:15
+#. translators: A multiline translators comment.
+msgid "B"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:62
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:62
+msgid "Select an image"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:63
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:63
+msgid "Select audio files"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:64
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:64
+msgid "Are you sure to want to remove this track?"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:76
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:76
+msgid "Tracklist"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:85
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:85
+msgid "Playlist shortcode"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:96
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:96
+msgid "Use this playlist as sticky player"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:114
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:114
+msgid ""
+"Copy and paste the following shortcode in your post or page to display your "
+"playlist."
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:132
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:132
+msgid ""
+"Click on the button below to add tracks to your playlist, then drag and "
+"drop to reorder them."
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:134
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:134
+msgid "Add tracks"
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:153
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:153
+msgid ""
+"Use this player as sticky player that will be displayed at the bottom of "
+"every page."
+msgstr ""
+
+#: inc/admin/class-wpm-admin.php:251 inc/admin/class-wpm-options.php:38
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-admin.php:251
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:38
+msgid "Settings"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:67
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:67
+msgid "Streaming URL"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:68
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:68
+msgid "Streaming Name"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:69
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:69
+msgid "Streaming Description"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:112
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:112
+msgid "http://streamingexample.com:8010/stream.mp3"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:123
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:123
+msgid ""
+"Enter your mp3 streaming URL here and a player will be displayed at the "
+"bottom of your pages. It will overwrite the current playlist set as "
+"\"sticky player\".<br>Your theme must support this feature. <a "
+"href=\"%s\">Get a theme with sticky player support</a>."
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:140
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:140
+msgid "My Radio"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:153
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:153
+msgid "The Best Radio in the World"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:166
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:166
+msgid "Playlist Settings"
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:169
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:169
+msgid "Settings saved."
+msgstr ""
+
+#: inc/admin/class-wpm-options.php:175
+#: pack/wolf-playlist-manager/inc/admin/class-wpm-options.php:175
+msgid "Save Changes"
+msgstr ""
+
+#: inc/admin/updater.php:434
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please "
+"reactivate it manually."
+msgstr ""
+
+#: inc/admin/updater.php:435
+msgid "Plugin reactivated successfully."
+msgstr ""
+
+#: inc/class-wpm-playlist-widget.php:33
+#: pack/wolf-playlist-manager/inc/class-wpm-playlist-widget.php:33
+msgid "Displays your chosen playlist."
+msgstr ""
+
+#: inc/class-wpm-playlist-widget.php:35 inc/wpm-register-post-type.php:19
+#: pack/wolf-playlist-manager/inc/class-wpm-playlist-widget.php:35
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:19
+msgid "Playlist"
+msgstr ""
+
+#: inc/class-wpm-playlist-widget.php:97
+#: pack/wolf-playlist-manager/inc/class-wpm-playlist-widget.php:97
+msgid "Title:"
+msgstr ""
+
+#: inc/class-wpm-playlist-widget.php:101
+#: pack/wolf-playlist-manager/inc/class-wpm-playlist-widget.php:101
+msgid "Playlist:"
+msgstr ""
+
+#: inc/frontend/wpm-functions.php:48
+#: pack/wolf-playlist-manager/inc/frontend/wpm-functions.php:48
+msgid "Toggle Player"
+msgstr ""
+
+#: inc/wpm-core-functions.php:85
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:85
+msgid "Remove artwork"
+msgstr ""
+
+#: inc/wpm-core-functions.php:91 inc/wpm-core-functions.php:92
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:91
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:92
+msgid "Title"
+msgstr ""
+
+#: inc/wpm-core-functions.php:97 inc/wpm-core-functions.php:98
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:97
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:98
+msgid "Artist"
+msgstr ""
+
+#: inc/wpm-core-functions.php:103
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:103
+msgid "Lenght"
+msgstr ""
+
+#: inc/wpm-core-functions.php:114
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:114
+msgid "Not linked"
+msgstr ""
+
+#: inc/wpm-core-functions.php:119
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:119
+msgid "No product yet"
+msgstr ""
+
+#: inc/wpm-core-functions.php:125
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:125
+msgid "WooCommerce Product ID"
+msgstr ""
+
+#: inc/wpm-core-functions.php:127
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:127
+msgid "None"
+msgstr ""
+
+#: inc/wpm-core-functions.php:140
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:140
+msgid "iTunes"
+msgstr ""
+
+#: inc/wpm-core-functions.php:147
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:147
+msgid "amazon"
+msgstr ""
+
+#: inc/wpm-core-functions.php:154
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:154
+msgid "googleplay"
+msgstr ""
+
+#: inc/wpm-core-functions.php:161
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:161
+msgid "Other buy URL"
+msgstr ""
+
+#: inc/wpm-core-functions.php:168
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:168
+#: pack/wolf-playlist-manager/templates/playlist.php:36
+#: templates/playlist.php:36
+msgid "Free Download"
+msgstr ""
+
+#: inc/wpm-core-functions.php:171
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:171
+msgid "It will overwrite the settings above"
+msgstr ""
+
+#: inc/wpm-core-functions.php:177
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:177
+msgid "Remove"
+msgstr ""
+
+#: inc/wpm-core-functions.php:178
+#: pack/wolf-playlist-manager/inc/wpm-core-functions.php:178
+msgid "Close"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:18 inc/wpm-register-post-type.php:30
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:18
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:30
+msgid "Playlists"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:20
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:20
+msgid "Add New"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:21
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:21
+msgid "Add New Playlist"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:22
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:22
+msgid "All Playlists"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:23
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:23
+msgid "Edit Playlist"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:24
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:24
+msgid "New Playlist"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:25
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:25
+msgid "View Playlist"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:26
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:26
+msgid "Search Playlists"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:27
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:27
+msgid "No playlist found"
+msgstr ""
+
+#: inc/wpm-register-post-type.php:28
+#: pack/wolf-playlist-manager/inc/wpm-register-post-type.php:28
+msgid "No playlist found in Trash"
+msgstr ""
+
+#: pack/wolf-playlist-manager/templates/playlist.php:39
+#: templates/playlist.php:39
+msgid "Buy on iTunes"
+msgstr ""
+
+#: pack/wolf-playlist-manager/templates/playlist.php:42
+#: templates/playlist.php:42
+msgid "Buy on amazon"
+msgstr ""
+
+#: pack/wolf-playlist-manager/templates/playlist.php:45
+#: templates/playlist.php:45
+msgid "Buy on Google Play"
+msgstr ""
+
+#: pack/wolf-playlist-manager/templates/playlist.php:48
+#: templates/playlist.php:48
+msgid "Buy now"
+msgstr ""
+
+#: pack/wolf-playlist-manager/templates/playlist.php:53
+#: templates/playlist.php:53
+msgid "Add to cart"
+msgstr ""
+
+#: pack/wolf-playlist-manager/templates/single-wpm_playlist.php:38
+#: templates/single-wpm_playlist.php:38
+msgid "Edit"
+msgstr ""
+
+#: pack/wolf-playlist-manager/wolf-playlist-manager.php:120
+#: wolf-playlist-manager.php:107
+msgid ""
+"%1$s needs at least PHP %2$s installed on your server. You have version "
+"%3$s currently installed. Please contact your hosting service provider if "
+"you're not able to update PHP by yourself."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Playlist Manager"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wlfthm.es/wolf-playlist-manager"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A plugin to manage your playlists."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WolfThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wolfthemes.com"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:6
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:7
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:8
+msgctxt "a string"
+msgid "String"
+msgstr ""

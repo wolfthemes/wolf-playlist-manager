@@ -1,0 +1,583 @@
+.wpm-playlist,
+.wpm-playlist *,
+.wpm-playlist:after,
+.wpm-playlist:before {
+	box-sizing: border-box
+}
+.wpm-playlist .wpm-track,
+.wpm-playlist .wpm-tracks {
+	border-color: #e0e0e0;
+	width: 100%;
+	border-style: solid
+}
+.wpm-audio {
+	display: none
+}
+.wpm-playlist {
+	border-radius: 5px;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	margin: 0 0 20px;
+	position: relative
+}
+.wpm-playlist .wpm-track {
+	border-width: 1px 0 0;
+	color: grey;
+	cursor: pointer;
+	display: table;
+	margin: 0;
+	padding: 0
+}
+.wpm-playlist .wpm-track .wpm-track-cell {
+	display: table-cell;
+	vertical-align: middle
+}
+.wpm-playlist .wpm-track .wpm-track-details {
+	padding: 12px 20px;
+	line-height: 18px
+}
+.wpm-playlist .wpm-track .wpm-track-details .wpm-track-title {
+	color: #444;
+	display: block;
+	font-weight: 700
+}
+.wpm-playlist .wpm-track .wpm-track-details .wpm-track-artist {
+	display: block
+}
+.wpm-playlist .wpm-track .wpm-track-length {
+	font-size: 11px;
+	padding: 10px 20px 10px 10px;
+	text-align: right
+}
+.wpm-playlist .wpm-track.is-current,
+.wpm-playlist .wpm-track:hover {
+	background-color: #f5f5f5
+}
+.wpm-playlist .wpm-tracks {
+	background: #fff;
+	border-width: 0 1px 1px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .08);
+	list-style: none;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	text-align: left
+}
+.wpm-playlist .entry-content ol.wpm-tracks,
+.wpm-playlist .entry-content ol.wpm-tracks li.wpm-track,
+.wpm-playlist .widget ol.wpm-tracks li.wpm-track {
+	margin: 0;
+	padding: 0
+}
+.wpm-playlist.is-playlist-hidden .wpm-tracks,
+.wpm-playlist.max-width-300 .wpm-track .wpm-track-length {
+	display: none
+}
+.wpm-playlist.max-width-200 .wpm-track {
+	border-color: rgba(0, 0, 0, .1);
+	border-width: 0 0 1px
+}
+.wpm-playlist.max-width-200 .wpm-track .wpm-track-details {
+	padding: 8px 10px
+}
+.wpm-playlist.max-width-200 .wpm-track .wpm-track-details .wpm-track-title {
+	font-weight: 400
+}
+.wpm-playlist.max-width-200 .wpm-track.is-current,
+.wpm-playlist.max-width-200 .wpm-track:hover {
+	background: 0 0
+}
+.wpm-playlist.max-width-200 .wpm-track.is-current .wpm-track-details .wpm-track-title,
+.wpm-playlist.max-width-200 .wpm-track:hover .wpm-track-details .wpm-track-title {
+	font-weight: 700
+}
+.wpm-playlist.max-width-200 .wpm-track:last-of-type {
+	border-bottom-width: 0
+}
+.wpm-playlist.max-width-200 .wpm-tracks {
+	background: rgba(255, 255, 255, .8);
+	border-width: 0;
+	box-shadow: none;
+	max-height: 100%
+}
+@media only screen and (min-width: 600px) {
+	.wpm-tracks {
+		max-height: 286px
+	}
+}
+.wpm-skin-default.mejs-container {
+	background: #000;
+	background-clip: padding-box;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	box-shadow: 0 1px rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .3);
+	height: 142px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-align: left;
+	transform: translate3d(0, 0, 0);
+	width: 100%
+}
+.wpm-skin-default.mejs-container .mejs-inner {
+	height: 142px;
+	padding: 15px 15px 25px;
+	position: relative;
+	z-index: 10
+}
+.wpm-skin-default.mejs-container .mejs-mediaelement {
+	background: 0 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-size: cover;
+	filter: blur(9px); 
+}
+.wpm-skin-default.mejs-container .mejs-track-artwork {
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .3);
+	float: left;
+	height: 100px;
+	margin-right: 15px;
+	position: relative;
+	width: 100px
+}
+.wpm-skin-default.mejs-container .mejs-track-artwork:before {
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0
+}
+.wpm-skin-default.mejs-container .mejs-track-artwork img {
+	display: block;
+	height: 100%;
+	width: 100%
+}
+.wpm-skin-default.mejs-container .mejs-track-details {
+	color: #fff;
+	padding-top: 4px
+}
+.wpm-skin-default.mejs-container .mejs-track-details .mejs-track-artist {
+	display: block;
+	line-height: 2;
+	margin-right: 45px
+}
+.wpm-skin-default.mejs-container .mejs-track-details .mejs-track-title {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.2
+}
+.wpm-skin-default.mejs-container .mejs-controls {
+	background: 0 0;
+	display: block;
+	margin-top: 10px;
+	position: static
+}
+.wpm-skin-default.mejs-container .mejs-controls div {
+	float: left;
+	height: auto;
+	width: auto
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-button button {
+	background: 0 0;
+	border-color: #fff;
+	border-radius: 0;
+	border-style: solid;
+	box-shadow: none;
+	color: #fff;
+	height: 20px;
+	margin: 0;
+	outline: 0;
+	position: relative;
+	transition: none;
+	width: 20px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-button button:before {
+	content: ""
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-button button svg {
+	fill: currentColor;
+	vertical-align: middle
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-button button:active,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-button button:focus {
+	background: 0 0;
+	box-shadow: none;
+	outline: 0
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button {
+	background: rgba(0, 0, 0, .5);
+	border-radius: 30px;
+	box-shadow: 0 0 0 5px rgba(255, 255, 255, .5);
+	cursor: pointer;
+	height: 50px;
+	position: absolute;
+	top: 39px;
+	left: 39px;
+	transition: box-shadow .2s;
+	width: 50px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button button {
+	height: 20px;
+	width: 16px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button:hover,
+.is-playing .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button {
+	box-shadow: 0 0 0 5px #fff
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button.mejs-pause button {
+	border-width: 0 5px;
+	margin: 15px 17px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button.mejs-play button {
+	border-color: transparent #fff;
+	border-style: inset solid;
+	border-width: 10px 0 10px 16px;
+	height: 0;
+	margin: 15px 15px 15px 19px;
+	width: 0
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-next-button,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button {
+	cursor: pointer;
+	height: 20px;
+	margin-right: 15px;
+	opacity: .6;
+	position: relative;
+	transition: opacity .2s;
+	width: 20px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-next-button button,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button button {
+	border-color: transparent #fff;
+	border-style: inset solid;
+	border-width: 8px 0 8px 12px;
+	height: 0;
+	margin: 2px 4px;
+	width: 0
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-next-button button:before,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button button:before {
+	background: #fff;
+	content: "";
+	display: block;
+	height: 14px;
+	position: absolute;
+	top: -7px;
+	right: -2px;
+	width: 3px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-next-button:hover,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button:hover {
+	opacity: 1
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button button {
+	border-width: 8px 12px 8px 0
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button button:before {
+	right: auto;
+	left: -2px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time-rail {
+	box-shadow: 0 -1px rgba(255, 255, 255, .2);
+	height: 10px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time-rail .mejs-time-total {
+	background: rgba(0, 0, 0, .4);
+	border-radius: 0;
+	height: 10px;
+	margin: 0;
+	width: 100%
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time-rail .mejs-time-handle {
+	background: rgba(255, 255, 255, .5);
+	border-radius: 0;
+	border-width: 0;
+	display: block;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	width: 5px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time-rail .mejs-time-current,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: 0 0;
+    height: 10px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time {
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    bottom: 25px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time span {
+    color: #fff;
+    line-height: 16px;
+    margin: 0
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-time .mejs-time-separator {
+    padding: 0 5px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button {
+    height: 24px;
+    margin-right: 10px;
+    opacity: .6;
+    top: -2px;
+    width: 24px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider:hover,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button:hover {
+    opacity: 1
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button button,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button button:focus {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LDE2di0xLjVjMS4zNzgsMCwyLjUtMS4xMjIsMi41LTIuNWMwLTEuMzc5LTEuMTIyLTIuNS0yLjUtMi41VjhjMi4yMDksMCw0LDEuNzkxLDQsNEMxOCwxNC4yMDksMTYuMjA5LDE2LDE0LDE2eiBNMTQsNCB2MS41YzMuNTg0LDAsNi41LDIuOTE2LDYuNSw2LjVzLTIuOTE2LDYuNS02LjUsNi41VjIwYzQuNDE4LDAsOC0zLjU4Miw4LThTMTguNDE4LDQsMTQsNHogTTIsOXY2aDRsNiw2VjNMNiw5SDJ6Ii8+PC9zdmc+);
+    height: 24px;
+    width: 24px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button.mejs-unmute button,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button.mejs-unmute button:focus {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LDkuNVY4YzIuMjA5LDAsNCwxLjc5MSw0LDRjMCwwLjgxNC0wLjI0NiwxLjU3LTAuNjY0LDIuMjAyTDE2LjIzNCwxMy4xYzAuMTY1LTAuMzMzLDAuMjY2LTAuNzAzLDAuMjY2LTEuMSBDMTYuNSwxMC42MjEsMTUuMzc4LDkuNSwxNCw5LjV6IE0yMC41LDEyYzAsMS41MDMtMC41MTgsMi44ODUtMS4zNzgsMy45ODhsMS4wNzMsMS4wNzNDMjEuMzIyLDE1LjY4MiwyMiwxMy45MiwyMiwxMiBjMC00LjQxOC0zLjU4Mi04LTgtOHYxLjVDMTcuNTg0LDUuNSwyMC41LDguNDE2LDIwLjUsMTJ6IE0xMiwzTDkuMDY3LDUuOTMzTDEyLDguODY2VjN6IE0yLDMuMDYxbDQuOTcsNC45N0w2LDlIMnY2aDRsNiw2di03LjkzOSBsNC43ODUsNC43ODVDMTUuOTM4LDE4LjI1MiwxNS4wMDEsMTguNSwxNCwxOC41VjIwYzEuNDIyLDAsMi43NTUtMC4zNzYsMy45MTItMS4wMjhMMjAuOTM5LDIyTDIyLDIwLjkzOUwzLjA2MSwyTDIsMy4wNjF6Ii8+PC9zdmc+)
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+    float: left;
+    height: 20px;
+    width: 100px
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+.wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+    border-radius: 3px;
+    height: 6px;
+    margin-top: -3px;
+    position: absolute;
+    top: 50%
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+    background: #fff;
+    opacity: .6;
+    width: 100%
+}
+.wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background: #fff;
+    opacity: 1
+}
+.wpm-skin-default.mejs-container .mejs-player-background {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    height: auto;
+    max-width: 120%;
+    opacity: .9;
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    left: -10%;
+    width: 120%;
+    z-index: 0
+}
+.wpm-skin-default.mejs-container .mejs-audiotheme-mark {
+    color: #fff
+}
+.mejs-audiotheme-mark {
+    color: #fff;
+    display: block;
+    height: 16px;
+    opacity: .6;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: opacity .2s;
+    width: 30px
+}
+.wpm-playlist.max-width-480 .wpm-skin-default.mejs-container .mejs-controls .mejs-horizontal-volume-slider,
+.wpm-playlist.max-width-480 .wpm-skin-default.mejs-container .mejs-controls .mejs-volume-button,
+.wpm-tracks-count-1 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button,
+.wpm-tracks-count-1 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button {
+    display: none
+}
+.mejs-audiotheme-mark svg {
+    fill: currentColor
+}
+.mejs-audiotheme-mark:hover {
+    opacity: 1
+}
+.no-css-filters.no-svg-filters .wpm-skin-default.mejs-container .mejs-player-background {
+    opacity: .3
+}
+.wpm-playlist.max-width-480 .wpm-skin-default.mejs-container .mejs-track-details .mejs-track-title {
+    font-size: 14px
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container {
+    height: auto;
+    padding-bottom: 100%
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-inner {
+	height: auto;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-layers,
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-track-artwork img {
+    height: 100%;
+    width: 100%
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-track-artwork {
+    box-shadow: none;
+    float: none;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-track-artwork:before {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .3);
+    z-index: 1
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-track-artwork:after {
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .55) 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-track-details {
+    padding: 0 20px;
+    position: absolute;
+    bottom: 45px;
+    text-align: center;
+    width: 100%;
+    z-index: 5
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-track-details .mejs-track-artist {
+    margin-right: 0
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls {
+    height: 0;
+    margin: 0
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button {
+    border-radius: 35px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    z-index: 5
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button button {
+    margin: 25px 27px
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button.mejs-play button {
+    margin: 25px 25px 25px 29px
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button,
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 18px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .5);
+    height: 36px;
+    margin-top: -18px;
+    margin-left: 58px;
+    opacity: .6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    z-index: 5
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button button,
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button button {
+    margin: 10px 12px
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button:hover,
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button:hover {
+	box-shadow: 0 0 0 2px #fff;
+	opacity: 1
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button {
+	margin-left: -94px
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-time-rail {
+	z-index: 5
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-time {
+	position: absolute;
+	right: auto;
+	bottom: 24px;
+	text-align: center;
+	width: 100%;
+	z-index: 5
+}
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-controls .mejs-time span {
+    display: inline-block;
+    float: none
+}
+.wpm-playlist.max-width-300 .wpm-skin-default.mejs-container .mejs-track-details,
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-audiotheme-mark,
+.wpm-playlist.max-width-380 .wpm-skin-default.mejs-container .mejs-player-background {
+	display: none
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container {
+	margin-bottom: 0;
+	border-radius: 0
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button {
+    border-radius: 25px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button.mejs-pause button {
+    margin: 15px 17px
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-playpause-button.mejs-play button {
+    margin: 15px 15px 15px 19px
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button,
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button {
+    background: 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 16px;
+    margin-top: -8px;
+    margin-left: 45px;
+    width: 16px
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button button,
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button button {
+    margin: 0
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-next-button:hover,
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button:hover {
+    box-shadow: none
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-previous-button {
+    margin-left: -65px
+}
+.wpm-playlist.max-width-200 .wpm-skin-default.mejs-container .mejs-controls .mejs-time {
+    bottom: 20px
+}

@@ -1,0 +1,40 @@
+.wpm-track-buy-links{
+	.added_to_cart{
+		display: none;
+	}
+}
+
+.wpm-add-to-cart-button{
+	position: relative;
+}
+
+.wpm-add-to-cart-button-title{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+
+.wpm-add-to-cart{
+	position: relative;
+	z-index: 0;
+}
+
+.wpm-icon-add-to-cart:before{
+	display: inline-block;
+}
+
+.wpm-add-to-cart-button.loading .wpm-icon-add-to-cart:before{
+	opacity: .66;
+}
+
+.wpm-add-to-cart-button.added .wpm-icon-add-to-cart:before{
+	animation: wpm_pop 0.3s linear 1;
+}
+
+// Add to cart pop animation
+@keyframes wpm_pop{
+	50%  {transform: scale(1.4);}
+}

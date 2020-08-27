@@ -1,0 +1,622 @@
+@import "icons";
+
+@import "add_to_cart";
+
+.wpm-playlist,
+.wpm-playlist *,
+.wpm-playlist:after,
+.wpm-playlist:before {
+	box-sizing: border-box;
+}
+
+.wpm-playlist .wpm-track,
+.wpm-playlist .wpm-tracks {
+	width: 100%;
+	border-style: solid
+}
+.wpm-audio {
+	display: none
+}
+
+.wpm-playlist{
+
+	//border-radius: 5px;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	margin: 0 0 20px;
+	position: relative;
+
+	ol.wpm-tracks{
+		margin-left: 0!important;
+		max-height: 305px;
+		
+		//overflow-y: auto;
+
+		&.wpm-tracks-has-scrollbar{
+			padding-right: 17px;
+		}
+	}
+
+	ol.wpm-tracks,
+	ol.wpm-tracks li.wpm-track{
+		margin: 0;
+		padding: 0
+	}
+
+	&.wpm-regular-playlist .mejs-controls .mejs-playpause-button{
+		color: #fff;
+	}
+
+	.mejs-container{
+		background-clip: padding-box;
+		//border-top-left-radius: 5px;
+		//border-top-right-radius: 5px;
+		height: 138px!important;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		text-align: left;
+		transform: translate3d(0,0,0);
+		width: 100%;
+		border-radius: 0;
+
+		.mejs-mediaelement {
+			background: 0 0;
+		}
+
+		.mejs-inner {
+			height: auto;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 138px;
+			padding: 15px 20px 25px;
+			position: relative;
+			z-index: 10;
+		}
+
+		.mejs-track-details {
+			//color: #fff;
+			position: relative;
+
+			.mejs-track-artist{
+				display: block;
+				line-height: 2;
+				margin-right: 45px;
+				min-height: 12px;
+			}
+
+			.mejs-track-title {
+				display: block;
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 1.2
+			}
+		}
+
+		.mejs-controls {
+
+			background: 0 0;
+			display: block;
+			margin-top: 10px;
+			height: 100%;
+
+			.mejs-time {
+				span {
+					color: #fff;
+					line-height: 16px;
+					margin: 0;
+				}
+			}
+
+			.mejs-time-rail {
+				background: none!important;
+				outline:none;
+				box-shadow: 0 -1px rgba(255,255,255,.2);
+				height: 4px;
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+
+				.mejs-time-hovered,
+				.mejs-time-handle{
+					display: none!important; // WP 4.9
+				}
+
+				.mejs-time-total {
+					outline:none;
+					background: rgba(0,0,0,.44)!important;
+					//background: none!important;
+					border-radius: 0;
+					height: 4px;
+					margin: 0;
+					width: 100%;
+				}
+
+				.mejs-time-loaded{
+					background: rgba(255,255,255,.22)!important;
+					//background: none!important;
+				}
+
+				.mejs-time-slider{
+					outline:none;
+				}
+
+				.mejs-time-handle {
+					background: rgba(255,255,255,.44);
+					border-radius: 0;
+					border-width: 0;
+					display: block;
+					height: 4px;
+					position: absolute;
+					top: 0;
+					width: 2px;
+				}
+			}
+
+			.mejs-button {
+				border:none;
+				height: 0;
+				margin: 15px 15px 15px 15px;
+				width: 0;
+
+				button {
+					background: 0 0;
+					border:none;
+					box-shadow: none;
+					//color: #fff;
+					height: 20px;
+					width: 20px;
+					margin: 0;
+					outline: 0;
+					position: relative;
+					transition: none;
+				}
+			}
+
+			.mejs-playpause-button {
+				background: rgba(0,0,0,.5);
+				border-radius: 30px;
+				//box-shadow: 0 0 0 5px rgba(255,255,255,.5);
+				cursor: pointer;
+				height: 50px;
+				width: 50px;
+				position: absolute;
+				transition: box-shadow .2s;
+				top: 25px;
+				left: 25px;
+				left: 24.5px;
+				//color: #FFF;
+
+				&:hover{
+					//box-shadow: 0 0 0 3px #fff
+				}
+
+				&.mejs-play,
+				&.mejs-pause{
+					&:before{
+						position: absolute;
+						font-family: Dashicons;
+						content: "\f522";
+						font-size: 36px;
+						height: 55px;
+						width: 55px;
+						text-align: center;
+						vertical-align: middle;
+						left: 0;
+						top: 0;
+					}
+				}
+
+				&.mejs-play{
+					&:before{
+						content: "\f522";
+						left: 0;
+						top: 20px;
+						top: 20.5px;
+					}
+				}
+
+				&.mejs-pause{
+					&:before{
+						content: "\f523";
+						left: -2px;
+						//left: -2.5px;
+						top: 20px;
+						top: 20.5px;
+					}
+				}
+
+			}
+
+			.mejs-previous-button,
+			.mejs-next-button{
+				// background: #000;
+				height: 30px;
+				width: 30px;
+				position: absolute;
+				top: 46px;
+				left: 110px;
+				cursor: pointer;
+				transition: opacity ease .2s;
+				opacity: 1;
+
+				&:before{
+					position: relative;
+					//color: #FFF;
+					font-family: Dashicons;
+					font-size: 24px;
+					padding:5px;
+					left: -2px;
+					top: 10px;
+				}
+
+				&:hover{
+					opacity: .77;
+				}
+			}
+
+			.mejs-previous-button{
+
+				&:before{
+					content: "\f516";
+				}
+
+			}
+
+			.mejs-next-button{
+				left: 150px;
+
+				&:before{
+					content: "\f517";
+				}
+			}
+
+			.mejs-toggle-playlist-button{
+				cursor: pointer;
+				position: absolute;
+				right: 0;
+				top: 0;
+				//color: #FFF;
+
+				&:before{
+					position: absolute;
+					right: 0;
+					top: 2px;
+					font-family: Dashicons;
+					content: "\f333";
+					font-size: 24px;
+					height: 20px;
+					width: 20px;
+				}
+			}
+
+			.mejs-time{
+				height: 16px;
+				line-height: 16px;
+				padding: 0;
+				position: absolute;
+				left: 130px;
+				bottom: 25px;
+			}
+		}
+	}
+
+	.mejs-track-artwork{
+		float: left;
+		height: 90px;
+		width: 90px!important;
+		margin-right: 20px;
+		margin-top: 7px;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0
+		}
+
+		img{
+			height: 90px;
+			width: 90px;
+			max-height: 100%;
+		}
+	}
+
+	&.has-artwork{
+		.mejs-track-artwork{
+			box-shadow: 0 0 0 1px rgba(0,0,0,.3);
+
+			&:before{
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+			}
+		}
+	}
+
+	.wpm-tracks{
+		border-style:solid;
+		border-width:1px;
+		border-top:none;
+	}
+
+	.mejs-controls{
+		border-style:solid;
+		border-width:1px;
+		border-bottom:none;
+	}
+
+	&.is-playlist-hidden{
+		.wpm-tracks{
+			display: none;
+		}
+	}
+
+	&.wpm-has-background:not(.wpm-sticky-playlist){
+		.wpm-playlist-background{
+			position: absolute;
+			top: -30px;
+			left: -30px;
+			width: calc(100% + 50px);
+			height: calc(100% + 50px);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100%;
+			background-size: cover;
+			filter:blur(9px);
+
+			&:before{
+				content : ' ';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #000;
+				opacity: 0.33;
+			}
+		}
+
+		.mejs-controls,
+		.mejs-track-artist,
+		.mejs-track-title{
+			color: #fff;
+		}
+
+		.mejs-controls{
+			.mejs-playpause-button {
+				box-shadow: 0 0 0 3px rgba(255,255,255,.5);
+
+				&:hover{
+					box-shadow: 0 0 0 3px #fff
+				}
+			}
+		}
+	}
+
+	.wpm-track{
+		min-height: 60px;
+		border-width: 1px 0 0;
+		cursor: pointer;
+		display: table;
+		margin: 0;
+		padding: 0;
+
+		&:first-child{
+			border-top: none;
+		}
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		.wpm-track-cell {
+			display: table-cell;
+			vertical-align: middle
+		}
+
+		.wpm-track-details {
+			padding: 12px 20px;
+			//padding: 9px 20px 8px;
+			line-height: 18px;
+			box-sizing: border-box;
+			text-align: left;
+
+			.wpm-track-title {
+				display: block;
+				font-weight: 700;
+			}
+
+			.wpm-track-artist {
+				display: block;
+			}
+		}
+
+		.wpm-track-length {
+			font-size: 11px;
+			padding: 10px 20px 10px 10px;
+			text-align: right;
+			width: 55px;
+		}
+
+		.wpm-track-links {
+			padding: 10px;
+			text-align: right;
+			width: 160px;
+		}
+
+		.wpm-track-icon{
+			opacity: 1!important;
+			text-decoration: none!important;
+			box-shadow:none;
+			transition: ease .2s;
+			margin: 0 4px;
+			font-size: 14px;
+		}
+
+	}
+}
+
+
+.wpm-playlist-500,
+.wpm-playlist-380{
+	.wpm-track-title,
+	.wpm-track-artist{
+		word-break:break-all;
+	}
+
+	.mejs-container{
+		.mejs-track-details {
+
+			.mejs-track-artist,
+			.mejs-track-title {
+				word-break:break-all;
+			}
+		}
+	}
+
+	.wpm-track .wpm-track-length {
+		display: none;
+	}
+}
+
+/* 500px small playlist */
+.wpm-playlist-500{
+	.mejs-container .mejs-track-details .mejs-track-title {
+		font-size: 14px;
+	}
+}
+
+/* 380px small playlist */
+.wpm-playlist-380{
+	.mejs-container .mejs-track-details .mejs-track-title {
+		font-size: 12px;
+	}
+}
+
+/* Default skin */
+$bg : #fff;
+$border : #e0e0e0;
+$text : grey;
+$text_strong : #0d0d0d;
+.wpm-theme-light{
+
+	/* light */
+	&.mejs-container{
+		//box-shadow: 0 1px rgba(0,0,0,.01),inset 0 0 0 1px rgba(0,0,0,.03);
+		background: $bg;
+		color: $text;
+
+		.mejs-track-details{
+			color: $text;
+		}
+	}
+
+	.mejs-controls,
+	.wpm-tracks{
+		background: $bg;
+		border-color: rgba(0,0,0,0.1);
+	}
+
+	.mejs-controls{
+		.mejs-playpause-button {
+			box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+		}
+	}
+
+	.wpm-track{
+		border-width: 1px 0 1px;
+		border-top-color: rgba(0, 0, 0, 0.1);
+		border-bottom-color: rgba(0, 0, 0, 0.02);
+		color: $text;
+
+		&:hover,
+		&.is-current{
+			background: darken($bg, 3%);
+		}
+	}
+
+	.mejs-track-artist,
+	.mejs-currenttime{
+		color: $text;
+	}
+
+	.wpm-track-title,
+	.mejs-track-title{
+		color: $text_strong;
+	}
+
+	.wpm-track-icon{
+		color: $text!important;
+
+		&:hover{
+			color: $text_strong!important;
+		}
+	}
+}
+
+$bg : #2d2d2d;
+$border : #191919;
+$text : #d1d8d9;
+$text_strong : #ffffff;
+.wpm-theme-dark{
+
+	&.mejs-container{
+		//box-shadow: 0 1px rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.3);
+		background: $bg;
+		color: $text;
+
+		.mejs-track-details{
+			color: $text;
+		}
+	}
+
+	.mejs-controls,
+	.wpm-tracks{
+		background: $bg;
+		border-color: rgba(0,0,0,.2);
+	}
+
+	.mejs-controls{
+		.mejs-playpause-button {
+			box-shadow: 0 0 0 3px rgba(255,255,255,.5);
+		}
+	}
+
+	.wpm-track{
+		border-width: 1px 0 1px;
+		border-top-color: $border;
+		border-bottom-color: rgba(255,255,255,.088);
+		color: $text;
+
+		&:hover,
+		&.is-current{
+			background: darken($bg, 3%);
+		}
+	}
+
+	.wpm-track-title{
+		color: $text_strong;
+	}
+
+	.wpm-track-icon{
+		color: $text!important;
+
+		&:hover{
+			color: $text_strong!important;
+		}
+	}
+}
+
+// Bar player
+@import "bar";

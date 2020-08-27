@@ -1,0 +1,200 @@
+# Copyright (C) 2016 WolfThemes
+# This file is distributed under the same license as the Wolf Playlist package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wolf Playlist 1.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-playlist-"
+"manager\n"
+"POT-Creation-Date: 2016-10-20 02:38+0200\n"
+"PO-Revision-Date: 2016-10-20 02:38+0200\n"
+"Last-Translator: WolfThemes <help@wolfthemes.com>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.10\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: dev\n"
+"X-Poedit-SearchPathExcluded-1: html\n"
+"X-Poedit-SearchPathExcluded-2: pack\n"
+"X-Poedit-SearchPathExcluded-3: scss\n"
+"X-Poedit-SearchPathExcluded-4: scss-admin\n"
+
+#: inc/admin/class-wpm-admin.php:62
+msgid "Select an image"
+msgstr "Sélectionner une image"
+
+#: inc/admin/class-wpm-admin.php:63
+msgid "Select audio files"
+msgstr "Sélectionnez les fichiers audio"
+
+#: inc/admin/class-wpm-admin.php:75
+msgid "Tracklist"
+msgstr "Liste des morceaux"
+
+#: inc/admin/class-wpm-admin.php:84
+msgid "Playlist shortcode"
+msgstr "Shortcode de la playlist"
+
+#: inc/admin/class-wpm-admin.php:95
+msgid "Use this playlist as sticky player"
+msgstr "Utilisez cette liste de lecture en tant que player collant"
+
+#: inc/admin/class-wpm-admin.php:114
+msgid ""
+"Use this player as sticky player that will be displayed at the bottom of "
+"every page."
+msgstr ""
+"Utilisez ce lecteur comme lecteur collante qui sera affiché au bas de chaque "
+"page."
+
+#: inc/admin/class-wpm-admin.php:128
+msgid ""
+"Copy and paste the following shortcode in your post or page to display your "
+"playlist."
+msgstr ""
+"Copiez et collez le shortcode suivant dans votre poste ou votre page pour "
+"afficher votre liste de lecture."
+
+#: inc/admin/class-wpm-admin.php:146
+msgid ""
+"Click on the button below to add tracks to your playlist, then drag and drop "
+"to reorder them."
+msgstr ""
+"Cliquez sur le bouton ci-dessous pour ajouter des morceaux à votre playlist, "
+"puis glisser-déplacer pour les réordonner."
+
+#: inc/admin/class-wpm-admin.php:148
+msgid "Add tracks"
+msgstr "Ajouter des pistes"
+
+#: inc/admin/class-wpm-admin.php:234
+msgid "Donate"
+msgstr "Faire un don"
+
+#: inc/class-wpm-playlist-widget.php:35
+msgid "Displays your chosen playlist."
+msgstr "Affiche votre playlist choisie."
+
+#: inc/class-wpm-playlist-widget.php:37 inc/wpm-register-post-type.php:19
+msgid "Playlist"
+msgstr "Playlist"
+
+#: inc/class-wpm-playlist-widget.php:99
+msgid "Title:"
+msgstr "Titre :"
+
+#: inc/class-wpm-playlist-widget.php:103
+msgid "Playlist:"
+msgstr "Liste de Lecture:"
+
+#: inc/wpm-core-functions.php:78
+msgid "Remove artwork"
+msgstr "Supprimer l'élément"
+
+#: inc/wpm-core-functions.php:84 inc/wpm-core-functions.php:85
+msgid "Title"
+msgstr "Titre"
+
+#: inc/wpm-core-functions.php:90 inc/wpm-core-functions.php:91
+msgid "Artist"
+msgstr "Artiste"
+
+#: inc/wpm-core-functions.php:96
+msgid "Lenght"
+msgstr "Durée"
+
+#: inc/wpm-core-functions.php:105
+msgid "iTunes"
+msgstr "iTunes"
+
+#: inc/wpm-core-functions.php:112
+msgid "amazon"
+msgstr "amazon"
+
+#: inc/wpm-core-functions.php:119
+msgid "Other buy URL"
+msgstr "Autre URL acheter"
+
+#: inc/wpm-core-functions.php:127
+msgid "Remove"
+msgstr "Retirer"
+
+#: inc/wpm-core-functions.php:128
+msgid "Close"
+msgstr "Fermer"
+
+#: inc/wpm-register-post-type.php:18 inc/wpm-register-post-type.php:30
+msgid "Playlists"
+msgstr "Playlists"
+
+#: inc/wpm-register-post-type.php:20
+msgid "Add New"
+msgstr "Ajouter une nouvelle"
+
+#: inc/wpm-register-post-type.php:21
+msgid "Add New Playlist"
+msgstr "Ajoutez une nouvelle playlist"
+
+#: inc/wpm-register-post-type.php:22
+msgid "All Playlists"
+msgstr "Toutes les playlists"
+
+#: inc/wpm-register-post-type.php:23
+msgid "Edit Playlist"
+msgstr "Modifier la Playlist"
+
+#: inc/wpm-register-post-type.php:24
+msgid "New Playlist"
+msgstr "Nouvelle playlist"
+
+#: inc/wpm-register-post-type.php:25
+msgid "View Playlist"
+msgstr "Voir la playlist"
+
+#: inc/wpm-register-post-type.php:26
+msgid "Search Playlists"
+msgstr "Rechercher des Playlists"
+
+#: inc/wpm-register-post-type.php:27
+msgid "No playlist found"
+msgstr "Aucune playlist correspondante trouvée"
+
+#: inc/wpm-register-post-type.php:28
+msgid "No playlist found in Trash"
+msgstr "Aucune playlist  trouvée dans la Corbeille."
+
+#: templates/playlist.php:34
+msgid "buy on iTunes"
+msgstr "Acheter sur iTunes"
+
+#: templates/playlist.php:37
+msgid "buy on amazon"
+msgstr "Acheter sur Amazon"
+
+#: templates/playlist.php:40
+msgid "buy now"
+msgstr "Achetez maintenant."
+
+#: templates/single-wpm_playlist.php:38
+msgid "Edit"
+msgstr "Editer"
+
+#: wolf-playlist-manager.php:99 wolf-playlist-manager.php:106
+msgid "Cheatin&#8217; huh?"
+msgstr "Alors on triche ?"
+
+#~ msgid ""
+#~ "Use this player as sticky player that wil be displayed at the bottom of "
+#~ "every page."
+#~ msgstr ""
+#~ "Utilisez ce lecteur comme lecteur collante que wil affichée au bas de "
+#~ "chaque page."

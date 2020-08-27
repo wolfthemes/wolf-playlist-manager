@@ -1,0 +1,16 @@
+{
+	"name": "wolfthemes/wolf-playlist-manager",
+	"description": "A plugin to manage your playlists.",
+	"type": "wordpress-plugin",
+	"homepage": "https://github.com/wolfthemes/wolf-playlist-manager",
+	"authors": [
+		{
+			"name": "WolfThemes",
+			"email": "contact@wolfthemes.com",
+			"homepage": "https://wolfthemes.com"
+		}
+	],
+	"require": {
+		"php": ">=5.6"
+	}
+}

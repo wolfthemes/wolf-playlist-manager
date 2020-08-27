@@ -1,0 +1,132 @@
+/*
+We use the menu item class to fit the Wordpress Style 
+So we need a couple of rules to overwrite stuff
+*/
+
+#wpm-tracklist{
+	.wpm-track.menu-item-bar .menu-item-handle{
+		box-sizing:border-box;
+		width: 100%;
+		padding: 15px 20px;
+	}
+
+	.wpm-track{
+		.wpm-toggle {
+			position: absolute;
+			right: -20px;
+			top: 0;
+			display: block;
+			width: 52px;
+			height: 52px;
+			margin-right: 0 !important;
+			text-indent: 100%;
+			outline: 0;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+			
+			&:after{
+				right: 0;
+				content: "\f140";
+				border: none;
+				background: 0 0;
+				font: 400 20px/1 dashicons;
+				speak: none;
+				display: block;
+				padding: 0;
+				text-indent: 0;
+				text-align: center;
+				position: relative;
+				text-decoration: none!important;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-top: -1px;
+			}
+		}
+	}
+
+	.wpm-track-content{
+		display: none;
+		padding: 15px;
+		border: 1px solid #ddd;
+		position: relative;
+		
+		.wpm-track-loader{
+			display: none;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			//background: #000;
+			width: 20px;
+			height: 20px;
+			background-size: 20px 20px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-image:url( '../../../../../../wp-includes/images/spinner-2x.gif' );
+		}
+	}
+
+	.wpm-track-column-group{
+		zoom: 1;
+		&:before, &:after { content: ""; display: table; }
+		&:after { clear: both!important; }
+	}
+
+	.wpm-track-actions{
+		text-align: right;
+		
+		a{
+			cursor: pointer;
+		}
+	}
+
+	.wpm-track-column{
+		float: left;
+		margin-right: 20px;
+	}
+
+	.wpm-track-column-artwork{
+		//margin-right: 20px;
+	}
+
+	.wpm-track-artwork{
+		cursor: pointer;
+		box-sizing:border-box;
+		display: block;
+		width: 150px;
+		height: 150px;
+		border: 2px dashed #b4b9be;
+		position: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-size: cover;
+		margin-top: 20px;
+
+		&:before{
+			color: #B4B9BE;
+			position: absolute;
+			font-family: Dashicons;
+			content: "\f128";
+			font-size: 24px;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%, -50%, 0);
+		}
+		
+		&.wpm-track-has-artwork{
+			border:none;
+			
+			&:before{
+				display: none;
+			}
+		}
+	}
+
+	.wpm-remove-artwork{
+		display: none;
+		margin-top: 5px;
+		cursor: pointer;
+		text-align: center;
+	}
+}
