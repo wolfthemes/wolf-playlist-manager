@@ -1,5 +1,8 @@
 # Changelog
 
+#### 8th March 2021 - Version 1.2.9
+
+-   Fix: Minor CSS theme compatibility fix
 #### 26th August 2020 - Version 1.2.8
 
 -   Tweak: Unbrand plugin name

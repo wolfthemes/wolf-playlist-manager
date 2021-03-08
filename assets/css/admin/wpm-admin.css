@@ -1,11 +1,12 @@
 /*
-We use the menu item class to fit the Wordpress Style 
+We use the menu item class to fit the Wordpress Style
 So we need a couple of rules to overwrite stuff
 */
 #wpm-tracklist .wpm-track.menu-item-bar .menu-item-handle {
   box-sizing: border-box;
   width: 100%;
   padding: 15px 20px;
+  max-width: none;
 }
 #wpm-tracklist .wpm-track .wpm-toggle {
   position: absolute;
@@ -91,7 +92,7 @@ So we need a couple of rules to overwrite stuff
   margin-top: 20px;
 }
 #wpm-tracklist .wpm-track-artwork:before {
-  color: #B4B9BE;
+  color: #b4b9be;
   position: absolute;
   font-family: Dashicons;
   content: "\f128";

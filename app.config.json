@@ -1,6 +1,6 @@
 {
-	"version": "1.2.8",
-	"updated": "2020-03-10",
+	"version": "1.2.9",
+	"updated": "2020-04-08",
 	"slug": "wolf-playlist-manager",
 	"name": "Playlist Manager",
 	"packagename": "WolfPlaylistManager",
@@ -8,7 +8,7 @@
 	"createdNice": "5th october 2016",
 	"description": "A plugin to manage your playlists.",
 	"link": "https://github.com/wolfthemes/wolf-playlist-manager",
-	"shortlink": "http://wlfthm.es/wolf-playlist-manager",
+	"shortlink": "https://wlfthm.es/playlist-manager",
 	"author": "WolfThemes",
 	"authorURI": "https://wolfthemes.com"
 }
