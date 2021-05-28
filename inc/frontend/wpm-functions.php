@@ -37,11 +37,17 @@ function wpm_enqueue_scripts() {
 
 	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WPM_VERSION;
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '': '.min';
+
+	wp_register_script( 'simplebar', WPM_JS . '/lib/simplebar.min.js', array( 'jquery' ), '4.2.3', true );
+	wp_register_script( 'jquery-cue', WPM_JS . '/lib/jquery.cue' . $suffix . '.js', array( 'jquery' ), '1.2.4', true );
+	wp_register_script( 'wpm-mejs', WPM_JS . '/wpm-mejs' . $suffix . '.js', array( 'jquery' ), $version, true );
+	wp_register_script( 'wpm-app', WPM_JS . '/app' . $suffix . '.js', array( 'jquery' ), $version, true );
+
 	wp_enqueue_script( 'wp-mediaelement' );
-	wp_enqueue_script( 'simplebar', WPM_JS . '/lib/simplebar.min.js', array( 'jquery' ), '4.2.3', true );
-	wp_enqueue_script( 'jquery-cue', WPM_JS . '/lib/jquery.cue' . $suffix . '.js', array( 'jquery' ), '1.2.4', true );
-	wp_enqueue_script( 'wpm-mejs', WPM_JS . '/wpm-mejs' . $suffix . '.js', array( 'jquery' ), $version, true );
-	wp_enqueue_script( 'wpm-app', WPM_JS . '/app' . $suffix . '.js', array( 'jquery' ), $version, true );
+	wp_enqueue_script( 'simplebar' );
+	wp_enqueue_script( 'jquery-cue' );
+	wp_enqueue_script( 'wpm-mejs' );
+	wp_enqueue_script( 'wpm-app' );
 	wp_localize_script(
 		'wpm-app', 'WPMParams', array(
 			'l10n' => array(
@@ -57,7 +63,7 @@ add_action( 'wp_enqueue_scripts', 'wpm_enqueue_scripts' );
  * Get tracklist in array format from post
  *
  * @since Playlist Manager 1.0
- * @param object $post
+ * @param object $post_id The post ID.
  * @return array
  */
 function get_wpm_playlist_tracks( $post_id ) {
@@ -118,7 +124,7 @@ function wpm_playlist( $post_id, $args = array() ) {
 		'pause_other_players' => true,
 	) );
 
-	$classes   = array( 'wpm-playlist' );
+	$classes   = array( 'wolf-playlist', 'wpm-playlist' );
 	$classes[] = $args['show_tracklist'] ? '' : 'is-playlist-hidden';
 	$classes[] = sprintf( 'wpm-theme-%s', sanitize_html_class( $args['theme'] ) );
 
@@ -136,22 +142,22 @@ function wpm_playlist( $post_id, $args = array() ) {
 
 	$container_class = 'wpm-playlist-container';
 
-	// is sticky player
+	// is sticky player?
 	if ( $args['is_sticky_player'] ) {
 		$container_class .= ' wpm-sticky-playlist-container';
 	}
 
 	$args = apply_filters( 'wpm_playlist_args', $args, $post_id );
 
-	echo '<div class="' . esc_attr( $container_class ) . '">';
+	echo '<wolf-playlist class="' . esc_attr( $container_class ) . '">';
 
 	do_action( 'wpm_before_playlist', $post_id, $tracks, $args );
 
-	include( WPM_DIR . '/templates/playlist.php' );
+	include WPM_DIR . '/templates/playlist.php';
 
 	do_action( 'wpm_after_playlist', $post_id, $tracks, $args );
 
-	echo '</div>';
+	echo '</wolf-playlist>';
 }
 
 /**
@@ -392,7 +398,7 @@ function wpm_streaming_cue_features( $features, $post_id ) {
 		);
 	}
 
-	
+
 
 	return $features;
 }
