@@ -1,7 +1,8 @@
 # Changelog
 
-#### 28th May 2021 - Version 1.3.0
+#### 28th May 2021 - Version 1.3.1
 
+-   Tweak: Updated Google play icon to YT music
 -   Tweak: Added custom HTML tag for easier parsing from theme
 
 #### 8th March 2021 - Version 1.2.9
