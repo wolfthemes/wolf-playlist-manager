@@ -18,7 +18,7 @@
 
 	<ol class="wpm-tracks" data-simplebar data-track-count="<?php echo esc_attr( count( $tracks ) ); ?>">
 		<?php foreach ( $tracks as $track ) : ?>
-			
+
 			<li class="wpm-track" itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
 				<?php do_action( 'wpm_playlist_track_top', $track, $post_id, $args ); ?>
 
@@ -42,7 +42,7 @@
 								<a title="<?php esc_html_e( 'Buy on amazon', 'wolf-playlist-manager' ); ?>" class="wpm-track-amazon wpm-track-icon wpm-icon-amazon" href="<?php echo esc_url( $track['amazonUrl'] ); ?>" target="_blank"></a>
 							<?php endif; ?>
 							<?php if ( $track['googleplayUrl'] ) : ?>
-								<a title="<?php esc_html_e( 'Buy on Google Play', 'wolf-playlist-manager' ); ?>" class="wpm-track-googleplay wpm-track-icon wpm-icon-googleplay" href="<?php echo esc_url( $track['googleplayUrl'] ); ?>" target="_blank"></a>
+								<a title="<?php esc_html_e( 'Buy on YT MUsic', 'wolf-playlist-manager' ); ?>" class="wpm-track-googleplay wpm-track-icon wpm-icon-googleplay" href="<?php echo esc_url( $track['googleplayUrl'] ); ?>" target="_blank"></a>
 							<?php endif; ?>
 							<?php if ( $track['buyUrl'] ) : ?>
 								<a title="<?php esc_html_e( 'Buy now', 'wolf-playlist-manager' ); ?>" class="wpm-track-buy wpm-track-icon wpm-icon-cart" href="<?php echo esc_url( $track['buyUrl'] ); ?>" target="_blank"></a>
@@ -54,7 +54,7 @@
 							<?php } ?>
 
 							<?php //do_action( 'wpm_buy_links', $track, $post_id, $args ); ?>
-						
+
 						<?php endif; ?>
 					</span>
 				</span>

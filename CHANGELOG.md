@@ -1,8 +1,12 @@
 # Changelog
 
+#### 2nd May June - Version 1.3.2
+
+-   Tweak: Set scrollbar class via PHP instead of JS
+
 #### 28th May 2021 - Version 1.3.1
 
--   Tweak: Updated Google play icon to YT music
+-   Tweak: Updated Google play icon to Youtube icon
 -   Tweak: Added custom HTML tag for easier parsing from theme
 
 #### 8th March 2021 - Version 1.2.9

@@ -14,7 +14,7 @@ var WPM = function ( $ ) {
 			var _this = this;
 
 			this.setWPMBarPlayerHtmlClass();
-			this.setTracklistCountClass();
+			//this.setTracklistCountClass();
 			this.cuePlaylists();
 
 			$( window ).resize( function() {

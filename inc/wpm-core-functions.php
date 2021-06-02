@@ -151,7 +151,7 @@ function wpm_get_track_markup( $tracklist ) {
 
 					<p>
 						<label>
-							<?php esc_html_e( 'googleplay', 'wolf-playlist-manager' ); ?>:<br>
+							<?php esc_html_e( 'YT Music', 'wolf-playlist-manager' ); ?>:<br>
 							<input class="wpm-track-googleplay_url regular-text" type="text" name="googleplay" placeholder="http://" value="<?php echo esc_url( $track['googleplayUrl'] ); ?>">
 						</label>
 					</p>

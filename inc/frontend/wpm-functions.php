@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 function wpm_enqueue_styles() {
 
 	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WPM_VERSION;
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_style( 'wp-mediaelement' );
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'simplebar', WPM_CSS . '/simplebar.css', array(), '4.2.3' );
@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'wpm_enqueue_styles', 1 );
 function wpm_enqueue_scripts() {
 
 	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WPM_VERSION;
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '': '.min';
+	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	wp_register_script( 'simplebar', WPM_JS . '/lib/simplebar.min.js', array( 'jquery' ), '4.2.3', true );
 	wp_register_script( 'jquery-cue', WPM_JS . '/lib/jquery.cue' . $suffix . '.js', array( 'jquery' ), '1.2.4', true );
@@ -49,10 +49,12 @@ function wpm_enqueue_scripts() {
 	wp_enqueue_script( 'wpm-mejs' );
 	wp_enqueue_script( 'wpm-app' );
 	wp_localize_script(
-		'wpm-app', 'WPMParams', array(
+		'wpm-app',
+		'WPMParams',
+		array(
 			'l10n' => array(
 				'togglePlayer' => esc_html__( 'Toggle Player', 'wolf-playlist-manager' ),
-			)
+			),
 		)
 	);
 }
@@ -68,7 +70,7 @@ add_action( 'wp_enqueue_scripts', 'wpm_enqueue_scripts' );
  */
 function get_wpm_playlist_tracks( $post_id ) {
 
-	$tracks = array();
+	$tracks    = array();
 	$tracklist = get_post_meta( $post_id, '_wpm_tracklist', true );
 
 	if ( is_array( $tracklist ) ) {
@@ -113,16 +115,19 @@ function wpm_playlist( $post_id, $args = array() ) {
 
 	$tracks = get_wpm_playlist_tracks( $post_id );
 
-	$args = wp_parse_args( $args, array(
-		'post_id' => $post_id,
-		'container' => true,
-		'show_tracklist' => true,
-		'player' => '',
-		'theme' => get_wpm_default_theme(),
-		'template' => '',
-		'is_sticky_player' => false,
-		'pause_other_players' => true,
-	) );
+	$args = wp_parse_args(
+		$args,
+		array(
+			'post_id'             => $post_id,
+			'container'           => true,
+			'show_tracklist'      => true,
+			'player'              => '',
+			'theme'               => get_wpm_default_theme(),
+			'template'            => '',
+			'is_sticky_player'    => false,
+			'pause_other_players' => true,
+		)
+	);
 
 	$classes   = array( 'wolf-playlist', 'wpm-playlist' );
 	$classes[] = $args['show_tracklist'] ? '' : 'is-playlist-hidden';
@@ -132,13 +137,17 @@ function wpm_playlist( $post_id, $args = array() ) {
 		$classes[] = 'wpm-has-background';
 	}
 
+	if ( 5 <= absint( count( $tracks ) ) ) {
+		$classes[] = 'wpm-tracks-has-scrollbar';
+	}
+
 	if ( $args['is_sticky_player'] ) {
 		$classes[] = 'wpm-sticky-playlist';
 	} else {
 		$classes[] = 'wpm-regular-playlist';
 	}
 
-	$classes   = implode( ' ', array_filter( $classes ) );
+	$classes = implode( ' ', array_filter( $classes ) );
 
 	$container_class = 'wpm-playlist-container';
 
@@ -149,7 +158,7 @@ function wpm_playlist( $post_id, $args = array() ) {
 
 	$args = apply_filters( 'wpm_playlist_args', $args, $post_id );
 
-	echo '<wolf-playlist class="' . esc_attr( $container_class ) . '">';
+	echo '<wolf-playlist class="' . esc_attr( $container_class ) . '" data-playlist-id="' . absint( $post_id ) . '">';
 
 	do_action( 'wpm_before_playlist', $post_id, $tracks, $args );
 
@@ -180,7 +189,7 @@ function wpm_get_cue_features() {
 		'duration',
 		'cueplaylist',
 		'cueplaylisttoggle',
-	//	'cuebarplayertoggle',
+	// 'cuebarplayertoggle',
 	);
 }
 
@@ -188,17 +197,17 @@ function wpm_get_cue_features() {
  * Print playlist settings as a JSON script tag
  *
  * @since 1.0.0
- * @param int $post_id Post ID.
- * @param array   $tracks   List of tracks.
- * @param array   $args     Playlist arguments.
+ * @param int   $post_id Post ID.
+ * @param array $tracks   List of tracks.
+ * @param array $args     Playlist arguments.
  */
 function wpm_print_playlist_settings( $post_id, $tracks, $args ) {
 
 	$settings = array();
-	//$post_id = $post->ID;
-	$tracks = get_wpm_playlist_tracks( $post_id );
-	$formatted_tracks = wpm_format_tracks_for_script( $tracks );
-	$theme = sanitize_title( $args['theme'] );
+	// $post_id = $post->ID;
+	$tracks              = get_wpm_playlist_tracks( $post_id );
+	$formatted_tracks    = wpm_format_tracks_for_script( $tracks );
+	$theme               = sanitize_title( $args['theme'] );
 	$pause_other_players = boolval( $args['pause_other_players'] );
 
 	// background from fetatured image
@@ -208,11 +217,11 @@ function wpm_print_playlist_settings( $post_id, $tracks, $args ) {
 	$features = apply_filters( 'wpm_cue_features', wpm_get_cue_features(), $post_id );
 
 	$settings = array(
-		'skin' => 'wpm-theme-' . $theme,
-		'tracks' => $formatted_tracks,
-		'thumbnail' => $background,
+		'skin'              => 'wpm-theme-' . $theme,
+		'tracks'            => $formatted_tracks,
+		'thumbnail'         => $background,
 		'pauseOtherPlayers' => $pause_other_players,
-		'cueFeatures' => $features,
+		'cueFeatures'       => $features,
 	);
 	?>
 	<script type="application/json" class="wpm-playlist-data"><?php echo wp_json_encode( $settings ); ?></script>
@@ -235,10 +244,10 @@ function wpm_format_tracks_for_script( $tracks ) {
 
 		$formatted_tracks = array();
 
-		foreach( $tracks as $key => $track ) {
+		foreach ( $tracks as $key => $track ) {
 
 			if ( $track['artist'] ) {
-				$formatted_tracks[ $key ][ 'meta' ]['artist'] = $track['artist'];
+				$formatted_tracks[ $key ]['meta']['artist'] = $track['artist'];
 			}
 
 			$formatted_tracks[ $key ]['src'] = $track['mp3'];
@@ -290,17 +299,17 @@ function wpm_output_sticky_player() {
 		wpm_playlist(
 			get_option( '_wpm_bar' ),
 			array(
-				'show_tracklist' => false,
+				'show_tracklist'   => false,
 				'is_sticky_player' => true,
 			)
 		);
 
-	// If a streaming URL is set in the option
+		// If a streaming URL is set in the option
 	} elseif ( wpm_get_option( 'streaming_url' ) ) {
 		wpm_playlist(
 			9999999, // arbitrary ID
 			array(
-				'show_tracklist' => false,
+				'show_tracklist'   => false,
 				'is_sticky_player' => true,
 			)
 		);
@@ -336,18 +345,18 @@ add_action( 'wolf_body_end', 'wpm_output_sticky_player_holder' );
  *
  * @since 1.1.5
  * @param array $tracklist
- * @param int $post_id
+ * @param int   $post_id
  * @return array $tracklist
  */
 function wpm_stream( $tracklist, $post_id ) {
 
 	if ( wpm_is_streaming_player( $post_id ) ) {
 
-		$tracklist[0] = get_wpm_default_track();
+		$tracklist[0]             = get_wpm_default_track();
 		$tracklist[0]['audioUrl'] = esc_url( wpm_get_option( 'streaming_url' ) );
-		$tracklist[0]['mp3'] = esc_url( wpm_get_option( 'streaming_url' ) );
-		$tracklist[0]['artist'] = esc_attr( wpm_get_option( 'streaming_name' ) );
-		$tracklist[0]['title'] = esc_attr( wpm_get_option( 'streaming_description' ) );
+		$tracklist[0]['mp3']      = esc_url( wpm_get_option( 'streaming_url' ) );
+		$tracklist[0]['artist']   = esc_attr( wpm_get_option( 'streaming_name' ) );
+		$tracklist[0]['title']    = esc_attr( wpm_get_option( 'streaming_description' ) );
 
 		// Get header image to use as artwork
 		$data = get_object_vars( get_theme_mod( 'header_image_data' ) );
@@ -384,7 +393,7 @@ function wpm_streaming_cue_features( $features, $post_id ) {
 	if ( wpm_is_streaming_player( $post_id ) ) {
 		$features = array(
 			'cuebackground',
-			//'cuehistory',
+			// 'cuehistory',
 			'cueartwork',
 			'cuecurrentdetails',
 			'cueprevioustrack',
@@ -397,8 +406,6 @@ function wpm_streaming_cue_features( $features, $post_id ) {
 			'cueplaylisttoggle',
 		);
 	}
-
-
 
 	return $features;
 }
