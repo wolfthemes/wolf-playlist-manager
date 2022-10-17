@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 [class^='wpm-icon-'],
 [class*=' wpm-icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -92,7 +91,6 @@
     transform: scale(1.4);
   }
 }
-
 .wpm-playlist,
 .wpm-playlist *,
 .wpm-playlist:after,
@@ -492,7 +490,7 @@
   /* light */
 }
 .wpm-theme-light.mejs-container {
-  background: white;
+  background: #fff;
   color: grey;
 }
 .wpm-theme-light.mejs-container .mejs-track-details {
@@ -500,7 +498,7 @@
 }
 .wpm-theme-light .mejs-controls,
 .wpm-theme-light .wpm-tracks {
-  background: white;
+  background: #fff;
   border-color: rgba(0, 0, 0, 0.1);
 }
 .wpm-theme-light .mejs-controls .mejs-playpause-button {
@@ -555,13 +553,13 @@
   background: #252525;
 }
 .wpm-theme-dark .wpm-track-title {
-  color: white;
+  color: #ffffff;
 }
 .wpm-theme-dark .wpm-track-icon {
   color: #d1d8d9 !important;
 }
 .wpm-theme-dark .wpm-track-icon:hover {
-  color: white !important;
+  color: #ffffff !important;
 }
 
 /* Sticky style */
@@ -692,7 +690,11 @@
 .wpm-sticky-playlist .mejs-container .mejs-controls .mejs-time {
   left: auto;
   right: 66px;
-  bottom: 19px;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
 .wpm-sticky-playlist .mejs-container .mejs-controls .mejs-time .mejs-time-separator,
 .wpm-sticky-playlist .mejs-container .mejs-controls .mejs-time .mejs-duration {
@@ -718,9 +720,7 @@
   width: 50px;
 }
 .wpm-sticky-playlist .mejs-container .mejs-track-details {
-  padding: 5px;
-  padding-left: 146px;
-  padding-right: 146px;
+  padding: 5px 69px 5px 145px;
   height: 50px;
   vertical-align: middle;
 }
@@ -750,7 +750,7 @@
 }
 .wpm-sticky-playlist.wpm-theme-dark .wpm-track-links a,
 .wpm-sticky-playlist.wpm-theme-transparent-light .wpm-track-links a {
-  color: white !important;
+  color: #fff !important;
 }
 .wpm-sticky-playlist.wpm-theme-dark .mejs-container .mejs-track-details,
 .wpm-sticky-playlist.wpm-theme-transparent-light .mejs-container .mejs-track-details {
@@ -781,7 +781,7 @@
 }
 .wpm-sticky-playlist.wpm-theme-light .wpm-track-links a,
 .wpm-sticky-playlist.wpm-theme-transparent-dark .wpm-track-links a {
-  color: #333333 !important;
+  color: #333 !important;
 }
 .wpm-sticky-playlist.wpm-theme-light .mejs-container .mejs-track-details,
 .wpm-sticky-playlist.wpm-theme-transparent-dark .mejs-container .mejs-track-details {

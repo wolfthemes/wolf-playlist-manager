@@ -166,7 +166,11 @@
 				// height: 50px;
 				right: 66px;
 				//line-height: 20px;
-				bottom: 19px;
+				bottom: 0;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				line-height: 1;
 
 				.mejs-time-separator,
 				.mejs-duration{
@@ -199,9 +203,7 @@
 		}
 
 		.mejs-track-details {
-			padding: 5px;
-			padding-left: 146px;
-			padding-right: 146px;
+			padding: 5px 69px 5px 145px;
 			height: 50px;
 			vertical-align: middle;
 
