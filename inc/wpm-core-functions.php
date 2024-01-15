@@ -199,13 +199,13 @@ function get_wpm_track_data( $post_id ) {
 	$title = ( $post->post_title ) ? $post->post_title : $post->post_name;
 	$file_url = $post->guid;
 	$artwork_id = absint( get_post_meta( $post_id, '_wpm_track_artwork', true ) );
-	$artwork_url = esc_url( wpm_get_url_from_attachment_id( $artwork_id, 'wpm-thumb' ) );
+	$artwork_url = esc_url( (string) wpm_get_url_from_attachment_id( $artwork_id, 'wpm-thumb' ) );
 
 	// buy URL
-	$itunes_url = esc_url( get_post_meta( $post_id, '_wpm_track_itunes_url', true ) );
-	$amazon_url = esc_url( get_post_meta( $post_id, '_wpm_track_amazon_url', true ) );
-	$googleplay_url = esc_url( get_post_meta( $post_id, '_wpm_track_googleplay_url', true ) );
-	$buy_url = esc_url( get_post_meta( $post_id, '_wpm_track_buy_url', true ) );
+	$itunes_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_itunes_url', true ) );
+	$amazon_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_amazon_url', true ) );
+	$googleplay_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_googleplay_url', true ) );
+	$buy_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_buy_url', true ) );
 	$free_dl = wpm_bool( get_post_meta( $post_id, '_wpm_track_free_dl', true ) );
 	$wc_product_id = absint( get_post_meta( $post_id, '_wpm_track_wc_product_id', true ) );
 

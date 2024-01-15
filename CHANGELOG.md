@@ -1,10 +1,14 @@
 # Changelog
 
-#### 17th October June 2022 - Version 1.3.3
+#### 15th January 2022 - Version 1.3.4
+
+-   Fix: Debug message with PHP 8.2
+
+#### 17th October 2022 - Version 1.3.3
 
 -   Fix: Sticky player bar track details padding on mobile
 
-#### 2nd May June 2021 - Version 1.3.2
+#### 2nd May 2021 - Version 1.3.2
 
 -   Tweak: Set scrollbar class via PHP instead of JS
 
