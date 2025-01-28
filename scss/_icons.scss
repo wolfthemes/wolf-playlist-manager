@@ -53,3 +53,21 @@
 		font-size: 16px;
 	}
 }
+
+.wpm-icon-bandcamp{
+	width: 14px;
+	height: 14px;
+	&:before{
+		position: relative;
+		top: 1px;
+		content: url(fonts/svg/bandcamp.svg)
+	}
+}
+
+.wpm-theme-light {
+	.wpm-icon-bandcamp {
+		&:before {
+			content: url(fonts/svg/bandcamp_dark.svg)
+		}
+	}
+}

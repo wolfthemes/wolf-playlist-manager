@@ -137,15 +137,22 @@ function wpm_get_track_markup( $tracklist ) {
 				<div class="wpm-track-column">
 					<p>
 						<label>
-							<?php esc_html_e( 'iTunes', 'wolf-playlist-manager' ); ?>:<br>
+							<?php esc_html_e( 'Apple', 'wolf-playlist-manager' ); ?>:<br>
 							<input class="wpm-track-itunes_url regular-text" type="text" name="itunes" placeholder="http://" value="<?php echo esc_url( $track['itunesUrl'] ); ?>">
 						</label>
 					</p>
 
 					<p>
 						<label>
-							<?php esc_html_e( 'amazon', 'wolf-playlist-manager' ); ?>:<br>
+							<?php esc_html_e( 'Amazon', 'wolf-playlist-manager' ); ?>:<br>
 							<input class="wpm-track-amazon_url regular-text" type="text" name="amazon" placeholder="http://" value="<?php echo esc_url( $track['amazonUrl'] ); ?>">
+						</label>
+					</p>
+
+					<p>
+						<label>
+							<?php esc_html_e( 'Bandcamp', 'wolf-playlist-manager' ); ?>:<br>
+							<input class="wpm-track-bandcamp_url regular-text" type="text" name="bandcamp" placeholder="http://" value="<?php echo esc_url( $track['bandcampUrl'] ); ?>">
 						</label>
 					</p>
 
@@ -204,6 +211,7 @@ function get_wpm_track_data( $post_id ) {
 	// buy URL
 	$itunes_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_itunes_url', true ) );
 	$amazon_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_amazon_url', true ) );
+	$bandcamp_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_bandcamp_url', true ) );
 	$googleplay_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_googleplay_url', true ) );
 	$buy_url = esc_url( (string) get_post_meta( $post_id, '_wpm_track_buy_url', true ) );
 	$free_dl = wpm_bool( get_post_meta( $post_id, '_wpm_track_free_dl', true ) );
@@ -220,6 +228,7 @@ function get_wpm_track_data( $post_id ) {
 	$track['artworkUrl'] = $artwork_url;
 	$track['itunesUrl'] = $itunes_url;
 	$track['amazonUrl'] = $amazon_url;
+	$track['bandcampUrl'] = $bandcamp_url;
 	$track['googleplayUrl'] = $googleplay_url;
 	$track['buyUrl'] = $buy_url;
 	$track['freeDownload'] = $free_dl;
@@ -251,6 +260,7 @@ function get_wpm_default_track() {
 		'title'      => '',
 		'itunesUrl' => '',
 		'amazonUrl' => '',
+		'bandcampUrl' => '',
 		'googleplayUrl' => '',
 		'buyUrl' => '',
 		'freeDownload' => '',

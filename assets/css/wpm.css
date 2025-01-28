@@ -52,6 +52,20 @@
   font-size: 16px;
 }
 
+.wpm-icon-bandcamp {
+  width: 14px;
+  height: 14px;
+}
+.wpm-icon-bandcamp:before {
+  position: relative;
+  top: 1px;
+  content: url(fonts/svg/bandcamp.svg);
+}
+
+.wpm-theme-light .wpm-icon-bandcamp:before {
+  content: url(fonts/svg/bandcamp_dark.svg);
+}
+
 .wpm-track-buy-links .added_to_cart {
   display: none;
 }
@@ -448,6 +462,8 @@
   padding: 10px;
   text-align: right;
   width: 160px;
+  margin-right: 0;
+  margin-left: auto;
 }
 .wpm-playlist .wpm-track .wpm-track-icon {
   opacity: 1 !important;
@@ -456,6 +472,8 @@
   transition: ease 0.2s;
   margin: 0 4px;
   font-size: 14px;
+  width: 14px;
+  height: 14px;
 }
 
 .wpm-playlist-500 .wpm-track-title,
@@ -522,10 +540,11 @@
   color: #0d0d0d;
 }
 .wpm-theme-light .wpm-track-icon {
-  color: grey !important;
+  opacity: 0.8;
+  color: #0d0d0d !important;
 }
 .wpm-theme-light .wpm-track-icon:hover {
-  color: #0d0d0d !important;
+  opacity: 1;
 }
 
 .wpm-theme-dark.mejs-container {
@@ -556,10 +575,11 @@
   color: #ffffff;
 }
 .wpm-theme-dark .wpm-track-icon {
-  color: #d1d8d9 !important;
+  opacity: 0.8;
+  color: #fff !important;
 }
 .wpm-theme-dark .wpm-track-icon:hover {
-  color: #ffffff !important;
+  opacity: 0.9;
 }
 
 /* Sticky style */

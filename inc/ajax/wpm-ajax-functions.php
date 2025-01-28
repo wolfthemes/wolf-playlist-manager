@@ -41,10 +41,10 @@ function wpm_ajax_update_track_title() {
 	extract( $_POST );
 
 	if ( isset( $_POST['newVal'] ) && isset( $_POST['trackId'] ) ) {
-		
+
 		$title = sanitize_text_field( $_POST['newVal']  );
 		$track_id = absint( $_POST['trackId'] );
-		
+
 		$post = array(
 			'ID' => $track_id,
 			'post_title' => $title,
@@ -72,13 +72,13 @@ function wpm_ajax_update_track_artist() {
 	extract( $_POST );
 
 	if ( isset( $_POST['newVal'] ) && isset( $_POST['trackId'] ) ) {
-		
+
 		$artist = sanitize_text_field( $_POST['newVal']  );
 		$track_id = absint( $_POST['trackId'] );
 
 		$meta = wp_get_attachment_metadata( $track_id, false);
 		$meta['artist'] = $artist;
-		
+
 		if ( wp_update_attachment_metadata( $track_id, $meta ) ) {
 			echo 'OK';
 		}
@@ -98,13 +98,13 @@ function wpm_ajax_update_track_length() {
 	extract( $_POST );
 
 	if ( isset( $_POST['newVal'] ) && isset( $_POST['trackId'] ) ) {
-		
+
 		$length = sanitize_text_field( $_POST['newVal']  );
 		$track_id = absint( $_POST['trackId'] );
 
 		$meta = wp_get_attachment_metadata( $track_id, false);
 		$meta['length_formatted'] = $length;
-		
+
 		if ( wp_update_attachment_metadata( $track_id, $meta ) ) {
 			echo 'OK';
 		}
@@ -159,6 +159,29 @@ function wpm_ajax_update_track_amazon_url() {
 
 }
 add_action( 'wp_ajax_wpm_ajax_update_track_amazon_url', 'wpm_ajax_update_track_amazon_url' );
+
+/**
+ * Save track bandcamp meta
+ *
+ * @since 1.0
+ */
+function wpm_ajax_update_track_bandcamp_url() {
+
+	extract( $_POST );
+
+	if ( isset( $_POST['newVal'] ) && isset( $_POST['trackId'] ) ) {
+
+		$bandcamp_url = esc_url( $_POST['newVal'] );
+		$track_id = absint( $_POST['trackId'] );
+
+		if ( update_post_meta( $track_id, '_wpm_track_bandcamp_url', $bandcamp_url ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+
+}
+add_action( 'wp_ajax_wpm_ajax_update_track_bandcamp_url', 'wpm_ajax_update_track_bandcamp_url' );
 
 /**
  * Save track googleplay meta

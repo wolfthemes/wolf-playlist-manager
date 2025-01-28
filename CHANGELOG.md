@@ -1,5 +1,9 @@
 # Changelog
 
+#### 28th January 2025 - Version 1.3.5
+
+-   Improvement: Added Bandcamp buy link
+
 #### 15th January 2022 - Version 1.3.4
 
 -   Fix: Debug message with PHP 8.2

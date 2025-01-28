@@ -448,6 +448,9 @@
 			padding: 10px;
 			text-align: right;
 			width: 160px;
+			//display: flex;
+			margin-right: 0;
+			margin-left: auto;
 		}
 
 		.wpm-track-icon {
@@ -457,6 +460,8 @@
 			transition: ease 0.2s;
 			margin: 0 4px;
 			font-size: 14px;
+			width: 14px;
+			height: 14px;
 		}
 	}
 }
@@ -548,10 +553,11 @@ $text_strong: #0d0d0d;
 	}
 
 	.wpm-track-icon {
-		color: $text !important;
+		opacity: 0.8;
+		color: #0d0d0d !important;
 
 		&:hover {
-			color: $text_strong !important;
+			opacity: 1;
 		}
 	}
 }
@@ -600,10 +606,12 @@ $text_strong: #ffffff;
 	}
 
 	.wpm-track-icon {
-		color: $text !important;
+		opacity: 0.8;
+		color: #fff !important;
 
 		&:hover {
-			color: $text_strong !important;
+			opacity: 0.9;
+			//color: $text_strong !important;
 		}
 	}
 }

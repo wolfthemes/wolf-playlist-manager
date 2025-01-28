@@ -44,6 +44,9 @@
 							<?php if ( $track['googleplayUrl'] ) : ?>
 								<a title="<?php esc_html_e( 'Buy on YT MUsic', 'wolf-playlist-manager' ); ?>" class="wpm-track-googleplay wpm-track-icon wpm-icon-googleplay" href="<?php echo esc_url( $track['googleplayUrl'] ); ?>" target="_blank"></a>
 							<?php endif; ?>
+							<?php if ( $track['bandcampUrl'] ) : ?>
+								<a title="<?php esc_html_e( 'Buy on Bandcamp', 'wolf-playlist-manager' ); ?>" class="wpm-track-bandcamp wpm-track-icon wpm-icon-bandcamp" href="<?php echo esc_url( $track['bandcampUrl'] ); ?>" target="_blank"></a>
+							<?php endif; ?>
 							<?php if ( $track['buyUrl'] ) : ?>
 								<a title="<?php esc_html_e( 'Buy now', 'wolf-playlist-manager' ); ?>" class="wpm-track-buy wpm-track-icon wpm-icon-cart" href="<?php echo esc_url( $track['buyUrl'] ); ?>" target="_blank"></a>
 							<?php endif; ?>

@@ -34,7 +34,7 @@ var WPMAdmin = function ( $ ) {
 			$( '#wpm_tracklist' ).on( 'click', '.wpm-upload', function( event ) {
 
 				var frame;
-				
+
 				event.preventDefault();
 				/* if there is a frame created, use it */
 				if ( frame ) {
@@ -45,7 +45,7 @@ var WPMAdmin = function ( $ ) {
 				var $panel = $( this ).parents( '.wpm-panel-body' ),
 					$tracklist = $panel.find( '#wpm-tracklist' ),
 					$input = $panel.find( 'input#file_ids' );
-				
+
 				/* open the wp.media frame with our localised title */
 				frame = wp.media.frames.file_frame = wp.media( {
 					title : WPMAdminParams.chooseAudio,
@@ -94,18 +94,18 @@ var WPMAdmin = function ( $ ) {
 
 				/* opens the wp.media frame and selects the appropriate files */
 				frame.on( 'open', function() {
-					
+
 					/* get the image IDs from the hidden input */
 					var fileIDs = $input.val().split( ',' ),
 						/* get the selection object for the wp.media frame */
 						selection = frame.state().get( 'selection' );
-					
+
 					if ( fileIDs && fileIDs.length ) {
-						
+
 						/* add each image to the selection */
 						$.each( fileIDs, function( idx, val ) {
 							var attachment;
-							
+
 							if ( $.isNumeric( val ) ) {
 								attachment = wp.media.attachment( val );
 							}
@@ -126,7 +126,7 @@ var WPMAdmin = function ( $ ) {
 		 */
 		sortable : function () {
 			/**
-		 	 * make sure the previews are sortable 
+		 	 * make sure the previews are sortable
 		 	 */
 		 	$( '#wpm-tracklist' ).sortable( {
 				update : function() {
@@ -186,7 +186,7 @@ var WPMAdmin = function ( $ ) {
 				if ( $container.hasClass( 'wpm-toggle-open' ) ) {
 					$content.slideUp( 'fast' );
 					$container.removeClass( 'wpm-toggle-open' );
-				
+
 				} else {
 					$container.addClass( 'wpm-toggle-open' );
 					$content.slideDown( 'fast' );
@@ -253,7 +253,7 @@ var WPMAdmin = function ( $ ) {
 		 * Remove artwork attached to track
 		 */
 		removeArtwork : function () {
-			
+
 			$( '#wpm_tracklist' ).on( 'click', '.wpm-remove-artwork', function( event ) {
 
 				event.preventDefault();
@@ -294,6 +294,7 @@ var WPMAdmin = function ( $ ) {
 			this.updateMeta( 'length' );
 			this.updateMeta( 'itunes_url' );
 			this.updateMeta( 'amazon_url' );
+			this.updateMeta( 'bandcamp_url' );
 			this.updateMeta( 'googleplay_url' );
 			this.updateMeta( 'buy_url' );
 			this.updateMeta( 'wc_product_id' );
@@ -309,10 +310,10 @@ var WPMAdmin = function ( $ ) {
 				action = 'keyup';
 
 			if ( 'wc_product_id' === meta ) {
-				
+
 				action = 'change';
 				time = 10;
-		
+
 			} else if ( 'free_dl' === meta ) {
 				action = 'change';
 				time = 10;
@@ -328,7 +329,7 @@ var WPMAdmin = function ( $ ) {
 					$loader = $container.find( '.wpm-track-loader' ),
 					trackId = $container.data( 'track-id' ),
 					data;
-					
+
 				if ( 'free_dl' === meta ) {
 					if ( ! $this.is(':checked') ) {
 						val = 'no';
