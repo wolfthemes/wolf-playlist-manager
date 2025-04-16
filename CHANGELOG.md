@@ -1,5 +1,9 @@
 # Changelog
 
+#### 16th April 2025 - Version 1.3.6
+
+-   Fix: Prevent PHP error in get_wpm_track_data when post is null
+
 #### 28th January 2025 - Version 1.3.5
 
 -   Improvement: Added Bandcamp buy link

@@ -201,10 +201,16 @@ function get_wpm_track_data( $post_id ) {
 	$track = get_wpm_default_track(); // set default track args
 
 	$post = get_post( $post_id );
+
+	if ( ! $post ) {
+		return $track; // return default track if post is not found
+	}
+
 	$meta = wp_get_attachment_metadata( $post_id );
 
 	$title = ( $post->post_title ) ? $post->post_title : $post->post_name;
 	$file_url = $post->guid;
+
 	$artwork_id = absint( get_post_meta( $post_id, '_wpm_track_artwork', true ) );
 	$artwork_url = esc_url( (string) wpm_get_url_from_attachment_id( $artwork_id, 'wpm-thumb' ) );
 
