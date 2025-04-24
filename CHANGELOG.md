@@ -1,5 +1,9 @@
 # Changelog
 
+#### 24th April 2025 - Version 1.3.7
+
+-   Fix: Prevent loading_plugin_text notice message
+
 #### 16th April 2025 - Version 1.3.6
 
 -   Fix: Prevent PHP error in get_wpm_track_data when post is null
