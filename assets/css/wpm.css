@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'wpmicons';
+  font-family: "wpmicons";
   src: url("fonts/wpmicons.eot?9boc5n");
   src: url("fonts/wpmicons.eot?9boc5n#iefix") format("embedded-opentype"), url("fonts/wpmicons.ttf?9boc5n") format("truetype"), url("fonts/wpmicons.woff?9boc5n") format("woff"), url("fonts/wpmicons.svg?9boc5n#wpmicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-[class^='wpm-icon-'],
-[class*=' wpm-icon-'] {
+[class^=wpm-icon-],
+[class*=" wpm-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'wpmicons' !important;
+  font-family: "wpmicons" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -21,34 +21,36 @@
 }
 
 .wpm-icon-cart:before {
-  content: '\e900';
+  content: "\e900";
 }
 
 .wpm-icon-add-to-cart:before {
-  content: '\e901';
+  content: "\e901";
 }
 
 .wpm-icon-googleplay:before {
   font-family: socicon;
-  content: '\e0a5';
+  content: "\e0a5";
 }
 
 .wpm-icon-download:before {
-  content: '\ea36';
+  content: "\ea36";
 }
 
 .wpm-icon-amazon:before {
-  content: '\ea87';
+  content: "\ea87";
 }
 
 .wpm-icon-itunes:before {
-  content: '\eabe';
+  content: "\eabe";
+  top: -1px;
+  position: relative;
 }
 
 .wpm-icon-cart:before,
 .wpm-icon-add-to-cart:before {
   position: relative;
-  top: 1px;
+  top: -1px;
   font-size: 16px;
 }
 
@@ -66,6 +68,10 @@
   content: url(fonts/svg/bandcamp_dark.svg);
 }
 
+.wpm-track-buy-links {
+  display: flex;
+  align-items: center;
+}
 .wpm-track-buy-links .added_to_cart {
   display: none;
 }
@@ -93,7 +99,7 @@
 }
 
 .wpm-add-to-cart-button.loading .wpm-icon-add-to-cart:before {
-  opacity: .66;
+  opacity: 0.66;
 }
 
 .wpm-add-to-cart-button.added .wpm-icon-add-to-cart:before {
@@ -270,7 +276,7 @@
 .wpm-playlist .mejs-container .mejs-controls .mejs-playpause-button.mejs-play:before, .wpm-playlist .mejs-container .mejs-controls .mejs-playpause-button.mejs-pause:before {
   position: absolute;
   font-family: Dashicons;
-  content: '\f522';
+  content: "\f522";
   font-size: 36px;
   height: 55px;
   width: 55px;
@@ -280,13 +286,13 @@
   top: 0;
 }
 .wpm-playlist .mejs-container .mejs-controls .mejs-playpause-button.mejs-play:before {
-  content: '\f522';
+  content: "\f522";
   left: 0;
   top: 20px;
   top: 20.5px;
 }
 .wpm-playlist .mejs-container .mejs-controls .mejs-playpause-button.mejs-pause:before {
-  content: '\f523';
+  content: "\f523";
   left: -2px;
   top: 20px;
   top: 20.5px;
@@ -316,13 +322,13 @@
   opacity: 0.77;
 }
 .wpm-playlist .mejs-container .mejs-controls .mejs-previous-button:before {
-  content: '\f516';
+  content: "\f516";
 }
 .wpm-playlist .mejs-container .mejs-controls .mejs-next-button {
   left: 150px;
 }
 .wpm-playlist .mejs-container .mejs-controls .mejs-next-button:before {
-  content: '\f517';
+  content: "\f517";
 }
 .wpm-playlist .mejs-container .mejs-controls .mejs-toggle-playlist-button {
   cursor: pointer;
@@ -335,7 +341,7 @@
   right: 0;
   top: 2px;
   font-family: Dashicons;
-  content: '\f333';
+  content: "\f333";
   font-size: 24px;
   height: 20px;
   width: 20px;
@@ -357,7 +363,7 @@
   position: relative;
 }
 .wpm-playlist .mejs-track-artwork:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -401,7 +407,7 @@
   filter: blur(9px);
 }
 .wpm-playlist.wpm-has-background:not(.wpm-sticky-playlist) .wpm-playlist-background:before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -470,7 +476,7 @@
   text-decoration: none !important;
   box-shadow: none;
   transition: ease 0.2s;
-  margin: 0 4px;
+  margin: 0 6px;
   font-size: 14px;
   width: 14px;
   height: 14px;
@@ -529,7 +535,7 @@
   color: grey;
 }
 .wpm-theme-light .wpm-track:hover, .wpm-theme-light .wpm-track.is-current {
-  background: #f7f7f7;
+  background: rgb(247.35, 247.35, 247.35);
 }
 .wpm-theme-light .mejs-track-artist,
 .wpm-theme-light .mejs-currenttime {
@@ -569,7 +575,7 @@
   color: #d1d8d9;
 }
 .wpm-theme-dark .wpm-track:hover, .wpm-theme-dark .wpm-track.is-current {
-  background: #252525;
+  background: rgb(37.35, 37.35, 37.35);
 }
 .wpm-theme-dark .wpm-track-title {
   color: #ffffff;
@@ -622,7 +628,7 @@
   box-shadow: none;
   position: absolute;
   bottom: 50px;
-  opacity: .88;
+  opacity: 0.88;
 }
 .wpm-sticky-playlist .wpm-track {
   border: none;
@@ -911,3 +917,5 @@ body.is-wpm-bar-player.wpm-bar-player-streaming .wpm-sticky-playlist-container .
     display: none;
   }
 }
+
+/*# sourceMappingURL=wpm.css.map */

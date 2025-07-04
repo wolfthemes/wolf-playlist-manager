@@ -1,5 +1,10 @@
 # Changelog
 
+
+#### 7th July 2025 - Version 1.3.8
+
+-   Improvement: Minor CSS fixes
+
 #### 24th April 2025 - Version 1.3.7
 
 -   Fix: Prevent loading_plugin_text notice message

@@ -3,7 +3,7 @@
  * Plugin Name: Playlist Manager
  * Plugin URI: https://wlfthm.es/wolf-playlist-manager
  * Description: A plugin to manage your playlists.
- * Version: 1.3.7
+ * Version: 1.3.8
  * Author: WolfThemes
  * Author URI: https://wolfthemes.com
  * Requires at least: 6.0
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Wolf_Playlist_Manager' ) ) {
 	 * Contains the main functions for Wolf_Playlist_Manager
 	 *
 	 * @class Wolf_Playlist_Manager
-	 * @version 1.3.7
+	 * @version 1.3.8
 	 * @since 1.0.0
 	 */
 	class Wolf_Playlist_Manager {
@@ -43,7 +43,7 @@ if ( ! class_exists( 'Wolf_Playlist_Manager' ) ) {
 		/**
 		 * @var string
 		 */
-		public $version = '1.3.7';
+		public $version = '1.3.8';
 
 		/**
 		 * @var Playlist Manager The single instance of the class

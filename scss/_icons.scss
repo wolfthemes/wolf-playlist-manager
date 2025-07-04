@@ -43,13 +43,15 @@
 }
 .wpm-icon-itunes:before {
 	content: '\eabe';
+	top: -1px;
+	position: relative;
 }
 
 .wpm-icon-cart,
 .wpm-icon-add-to-cart {
 	&:before {
 		position: relative;
-		top: 1px;
+		top: -1px;
 		font-size: 16px;
 	}
 }
