@@ -209,7 +209,7 @@ function get_wpm_track_data( $post_id ) {
 	$meta = wp_get_attachment_metadata( $post_id );
 
 	$title = ( $post->post_title ) ? $post->post_title : $post->post_name;
-	$file_url = $post->guid;
+	$file_url = wp_get_attachment_url( $post_id );
 
 	$artwork_id = absint( get_post_meta( $post_id, '_wpm_track_artwork', true ) );
 	$artwork_url = esc_url( (string) wpm_get_url_from_attachment_id( $artwork_id, 'wpm-thumb' ) );
