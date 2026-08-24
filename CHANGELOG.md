@@ -1,5 +1,8 @@
 # Changelog
 
+#### 24th August 2026 - Version 1.3.9
+
+- Fix: use wp_get_attachment_url for mp3 track src so offload/CDN plugins can rewrite it
 
 #### 7th July 2025 - Version 1.3.8
 
