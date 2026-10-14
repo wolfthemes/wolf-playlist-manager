@@ -33,22 +33,22 @@
 					<span class="wpm-track-buy-links">
 
 						<?php if ( $track['freeDownload'] ) : ?>
-								<a title="<?php esc_html_e( 'Free Download', 'wolf-playlist-manager' ); ?>" class="wpm-track-free-dl wpm-track-icon wpm-icon-download" href="<?php echo esc_url( $track['audioUrl'] ); ?>" download></a>
+								<a title="<?php esc_html_e( 'Free Download', 'wolf-playlist-manager' ); ?>" aria-label="<?php esc_html_e( 'Free Download', 'wolf-playlist-manager' ); ?>" class="wpm-track-free-dl wpm-track-icon wpm-icon-download" href="<?php echo esc_url( $track['audioUrl'] ); ?>" download></a>
 						<?php else : ?>
 							<?php if ( $track['itunesUrl'] ) : ?>
-								<a title="<?php esc_html_e( 'Buy on iTunes', 'wolf-playlist-manager' ); ?>" class="wpm-track-itunes wpm-track-icon wpm-icon-itunes" href="<?php echo esc_url( $track['itunesUrl'] ); ?>" target="_blank"></a>
+								<a title="<?php esc_html_e( 'Buy on iTunes', 'wolf-playlist-manager' ); ?>" aria-label="<?php esc_html_e( 'Buy on iTunes', 'wolf-playlist-manager' ); ?>" class="wpm-track-itunes wpm-track-icon wpm-icon-itunes" href="<?php echo esc_url( $track['itunesUrl'] ); ?>" target="_blank" rel="noopener"></a>
 							<?php endif; ?>
 							<?php if ( $track['amazonUrl'] ) : ?>
-								<a title="<?php esc_html_e( 'Buy on amazon', 'wolf-playlist-manager' ); ?>" class="wpm-track-amazon wpm-track-icon wpm-icon-amazon" href="<?php echo esc_url( $track['amazonUrl'] ); ?>" target="_blank"></a>
+								<a title="<?php esc_html_e( 'Buy on amazon', 'wolf-playlist-manager' ); ?>" aria-label="<?php esc_html_e( 'Buy on amazon', 'wolf-playlist-manager' ); ?>" class="wpm-track-amazon wpm-track-icon wpm-icon-amazon" href="<?php echo esc_url( $track['amazonUrl'] ); ?>" target="_blank" rel="noopener"></a>
 							<?php endif; ?>
 							<?php if ( $track['googleplayUrl'] ) : ?>
-								<a title="<?php esc_html_e( 'Buy on YT MUsic', 'wolf-playlist-manager' ); ?>" class="wpm-track-googleplay wpm-track-icon wpm-icon-googleplay" href="<?php echo esc_url( $track['googleplayUrl'] ); ?>" target="_blank"></a>
+								<a title="<?php esc_html_e( 'Buy on YT MUsic', 'wolf-playlist-manager' ); ?>" aria-label="<?php esc_html_e( 'Buy on YT MUsic', 'wolf-playlist-manager' ); ?>" class="wpm-track-googleplay wpm-track-icon wpm-icon-googleplay" href="<?php echo esc_url( $track['googleplayUrl'] ); ?>" target="_blank" rel="noopener"></a>
 							<?php endif; ?>
 							<?php if ( $track['bandcampUrl'] ) : ?>
-								<a title="<?php esc_html_e( 'Buy on Bandcamp', 'wolf-playlist-manager' ); ?>" class="wpm-track-bandcamp wpm-track-icon wpm-icon-bandcamp" href="<?php echo esc_url( $track['bandcampUrl'] ); ?>" target="_blank"></a>
+								<a title="<?php esc_html_e( 'Buy on Bandcamp', 'wolf-playlist-manager' ); ?>" aria-label="<?php esc_html_e( 'Buy on Bandcamp', 'wolf-playlist-manager' ); ?>" class="wpm-track-bandcamp wpm-track-icon wpm-icon-bandcamp" href="<?php echo esc_url( $track['bandcampUrl'] ); ?>" target="_blank" rel="noopener"></a>
 							<?php endif; ?>
 							<?php if ( $track['buyUrl'] ) : ?>
-								<a title="<?php esc_html_e( 'Buy now', 'wolf-playlist-manager' ); ?>" class="wpm-track-buy wpm-track-icon wpm-icon-cart" href="<?php echo esc_url( $track['buyUrl'] ); ?>" target="_blank"></a>
+								<a title="<?php esc_html_e( 'Buy now', 'wolf-playlist-manager' ); ?>" aria-label="<?php esc_html_e( 'Buy now', 'wolf-playlist-manager' ); ?>" class="wpm-track-buy wpm-track-icon wpm-icon-cart" href="<?php echo esc_url( $track['buyUrl'] ); ?>" target="_blank" rel="noopener"></a>
 							<?php endif; ?>
 							<?php if ( $track['wcProductId'] && class_exists( 'WooCommerce' ) ) {
 

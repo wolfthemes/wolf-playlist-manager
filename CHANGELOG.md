@@ -1,5 +1,9 @@
 # Changelog
 
+#### 14th October 2026 - Version 1.3.11
+
+- Accessibility: add aria-label to icon links (free download, store links, add to cart) and rel="noopener" to external links
+
 #### 24th August 2026 - Version 1.3.10
 
 - Fix: use wp_get_attachment_url for mp3 track src so offload/CDN plugins can rewrite it

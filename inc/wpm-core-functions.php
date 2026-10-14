@@ -431,6 +431,7 @@ function wpm_add_to_cart( $product_id, $classes = '', $text = '' ) {
 	return '<a
 		href="' . esc_url( $wc_url ) . '"
 		rel="nofollow"
+		aria-label="' . esc_attr__( 'Add to cart', 'wolf-playlist-manager' ) . '"
 		data-quantity="1" data-product_id="' . absint( $product_id ) . '"
 		class="' . wpm_sanitize_html_classes( $classes ) . '">' . $text . '</a>';
 }
